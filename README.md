@@ -15,8 +15,7 @@ This project explores and models academic performance data of students to uncove
 
 - **Name:** Students Performance in Exams  
 - **Source:** Royce Kimmons (Synthetic Data)  
-- **Size:** ~1000 rows, 8 features (categorical + numerical)  
-- **Target Variable:** Above-average performance (binary)  
+- **Size:** 1000 rows, 8 features (categorical + numerical)  
 
 ## Data Cleaning & Preprocessing
 
