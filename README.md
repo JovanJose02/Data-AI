@@ -98,21 +98,8 @@ This project explores and models academic performance data of students to uncove
   Top predictors: Math, Reading, Writing Scores, Test Prep, Parental Education  
   I used feature importance BECAUSE it highlights the most influential features.  
 
-## Reflections Incorporated
-
-Each section contains:  
-
-- "I used ___ BECAUSE ___" statements for:  
-  - Visualization choices  
-  - Feature selection decisions  
-  - Modeling strategies  
-  - Evaluation metrics  
-
-These statements demonstrate data literacy, modeling rationale, and explainability, essential for professional data science and machine learning portfolios.
-
 ## Final Reflections & Takeaways
-
-- “I noticed that there was a lot of missing data, so I used row deletion imputation BECAUSE the remaining data was sufficient and it avoided bias.”  
+ 
 - Used multiple visualizations to uncover gender, subject, and socioeconomic patterns  
 - Applied regression to confirm reading-writing score correlations  
 - Built and compared multiple classification models  
