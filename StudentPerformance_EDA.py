@@ -10,6 +10,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import ConfusionMatrixDisplay
 from sklearn.model_selection import GridSearchCV, cross_val_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
@@ -292,17 +293,33 @@ y_pred_rf = best_rf.predict(X_test)
 
 print("Tuned Random Forest - Classification Report:")
 print(classification_report(y_test, y_pred_rf))
-print("Confusion Matrix:")
-print(confusion_matrix(y_test, y_pred_rf))
+
+# Compute Confusion Matrix
+conf_matrix = confusion_matrix(y_test, y_pred_rf)
+
+# Plot Confusion Matrix
+disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=[0, 1])
+fig, ax = plt.subplots()
+disp.plot(cmap='Blues', ax=ax, colorbar=False)
+ax.grid(False)
+plt.title("Confusion Matrix: Above-Average Performance Classification")
+plt.show()
 
 # Explanation:
 # - GridSearchCV finds best hyperparameters across folds
 # - Improves model accuracy and reduces overfitting
+# - The confusion matrix visually summarizes model predictions vs actual outcomes,
+#   highlighting correct classifications (true positives/negatives) and errors (false positives/negatives).
 
 # Reflection:
 # I used GridSearchCV BECAUSE it allows automated tuning of multiple parameters for better performance.
+# I visualized the confusion matrix BECAUSE it provides a clear, intuitive snapshot of how well the model
+# distinguishes between above-average and below-average students, making it easier to spot misclassification patterns.
 
-# -----------------------------
+
+# ----------------------------------------------------------------------------------------
+
+
 # Cross-Validation Scores
 cv_scores = cross_val_score(best_rf, X, y, cv=5, scoring='accuracy')
 print(f"Cross-validated accuracy scores: {cv_scores}")
@@ -311,7 +328,9 @@ print(f"Mean CV Accuracy: {cv_scores.mean():.4f}")
 # Reflection:
 # I used cross-validation BECAUSE it provides a more reliable estimate of model generalization performance.
 
-# -----------------------------
+# ----------------------------------------------------------------------------------------
+
+
 # Model Comparison
 models = {
     "Logistic Regression": LogisticRegression(max_iter=1000),
@@ -416,5 +435,3 @@ Overall, this project demonstrated the critical role of exploratory data analysi
 model selection, hyperparameter tuning, and interpretability in understanding educational outcomes
 and building trustworthy predictive tools.
 """
-
-
