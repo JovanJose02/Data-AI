@@ -422,6 +422,11 @@ To improve performance, I used GridSearchCV BECAUSE it systematically tuned mode
 for optimal accuracy. I also performed cross-validation BECAUSE it provides a reliable, generalized
 performance estimate across folds. 
 
+I visualized the confusion matrix BECAUSE it provides a clear and intuitive snapshot of how well the model 
+distinguishes between above-average and below-average students. The confusion matrix highlighted not only 
+correct classifications (true positives and true negatives) but also the types of errors (false positives 
+and false negatives)—making it easier to spot potential misclassification patterns and areas for improvement.
+
 I tested multiple models including Logistic Regression, SVM, and XGBoost BECAUSE comparing performance
 ensures I select the most effective algorithm for the task.
 
@@ -435,3 +440,5 @@ Overall, this project demonstrated the critical role of exploratory data analysi
 model selection, hyperparameter tuning, and interpretability in understanding educational outcomes
 and building trustworthy predictive tools.
 """
+
+
