@@ -133,11 +133,16 @@ This project explores and models academic performance data of students to uncove
 | **Macro Avg**    | 0.98      | 0.98   | 0.97     | 200     |
 | **Weighted Avg** | 0.98      | 0.97   | 0.97     | 200     |
 
-#### Confusion Matrix:
-|                | Predicted Positive | Predicted Negative |
-|----------------|--------------------|--------------------|
-| **Actual Positive** |        TP (98)        |        FN  (1)        |
-| **Actual Negative** |        FP  (4)        |        TN  (97)        |
+---
+
+### 9. Confusion Matrix Plot:
+*Highlights correct classifications (true positives/negatives) and errors (false positives/negatives).*
+
+*I visualized the confusion matrix BECAUSE it provides a clear snapshot of how well the model distinguishes between above-average & below-average students, making it easier to spot misclassification patterns.*
+![Confusion Matrix](https://github.com/user-attachments/assets/d92cf447-d8da-42fa-ac70-c803111171d3)
+
+
+---
 
 
 ### Cross-Validation:
@@ -154,7 +159,7 @@ This project explores and models academic performance data of students to uncove
 
 ## Model Explainability
 
-### 9. Feature Importance Plot  
+### 10. Feature Importance Plot  
 *Top predictors: Math, Reading, Writing Scores, Test Preparation, Parental Education.*  
 *I used feature importance BECAUSE it highlights the most influential features.*  
 ![Feature Importance](https://github.com/user-attachments/assets/561fb656-079e-4f0a-8c36-e8ffb340d4ad)
@@ -162,7 +167,7 @@ This project explores and models academic performance data of students to uncove
 
 ---
 
-### 10. SHAP Summary Plot  
+### 11. SHAP Summary Plot  
 *Visualizes how features such as gender and race/ethnicity interact to influence model predictions using SHAP interaction values.*  
 *I used SHAP BECAUSE it provides interpretable AI insights.*  
 ![SHAP Summary](https://github.com/user-attachments/assets/78d21468-7225-41b2-b3c2-5f4ab099bf6c)
